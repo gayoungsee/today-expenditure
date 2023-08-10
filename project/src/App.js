@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Expenditure from './components/expenditure/Expenditure';
 

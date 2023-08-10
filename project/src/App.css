@@ -1,24 +1,14 @@
-.app {
-  /* font-family: 'Noto Sans KR', sans-serif; */
-  font-family: 'Nanum Myeongjo', serif;
-}
 .expenditure {
-  background-color: #eef1ff;
-  width: 40vw;
-  height: 100vh;
+  width: 550px;
   color: #332f2e;
   margin: 0 auto;
 }
 
 .ex-wrap {
-  margin-top: 100px;
-  width: 40vw;
-  height: calc(100vh - 100px);
-  background-color: #fefaee;
+  margin-top: 80px;
+  height: 700px;
+  background-color: #f9bd7e;
   border-radius: 20px;
-  /* position: relative; */
-  /* display: flex; */
-  /* justify-content: center; */
 }
 
 .ex-header {
@@ -27,23 +17,27 @@
   color: #22264c;
   height: 200px;
   background-color: #6d88e1;
+  position: relative;
 }
+
 .ex-t1 {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 36px;
   padding: 30px 30px 20px 30px;
   margin: 0;
+  font-family: 'Moirai One', cursive;
 }
 .ex-t2 {
   padding: 0px 0 10px 30px;
   margin: 0;
-  font-weight: 700;
   font-size: 16px;
+  font-family: 'Gamja Flower', cursive;
 }
 .ex-t2 strong {
+  font-weight: 700;
   color: #e66371;
-
-  font-weight: 800;
+  /* color: #f9bd7e; */
+  font-family: 'Gamja Flower', cursive;
 }
 .ex-body-wrap {
   display: flex;
@@ -51,22 +45,115 @@
   width: 100%;
 }
 .ex-body {
-  background-color: #fff;
+  padding: 10px 0;
+  background-color: #fefaee;
   border-radius: 20px;
-  width: 35vw;
-  height: 100%;
-  height: calc(100vh - 300px);
+  width: 500px;
+  height: 500px;
   position: absolute;
-  top: 250px;
+  top: 220px;
+  overflow: auto;
+  font-family: 'Hi Melody', cursive;
+  font-family: 'Gamja Flower', cursive;
+  font-size: 20px;
 }
 .ex-btn-add {
   width: 50px;
   height: 50px;
-  background-color: #fabc7f;
-  font-size: 16px;
+  /* background-color: #fefaee; */
+  background-color: #eef1ff;
+  font-size: 20px;
   border-radius: 50%;
   border: none;
   position: absolute;
-  bottom: 100px;
-  /* right: 100px; */
+  right: 50px;
+  top: 50px;
+}
+.ex-list {
+  height: 50px;
+}
+.ex-list-wrap {
+  padding: 0 15px;
+  position: relative;
+}
+.ex-list li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.ex-list li .ex-category-01 {
+  background-color: #cceebc;
+}
+.ex-list li .ex-category-02 {
+  background-color: #ffd9c0;
+}
+
+.ex-list li .ex-history {
+  margin-left: 10px;
+  width: 25%;
+}
+.ex-list li .ex-cost {
+  color: #e66371;
+  font-weight: 700;
+}
+.ex-btn-edit {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-image: url('./assets/img/icon/edit.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  /* background-color: orange; */
+}
+.ex-btn-delete {
+  border: none;
+  width: 28px;
+  height: 28px;
+  background-image: url('./assets/img/icon/delete.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: yellow;
+}
+
+/* 팝업 */
+.ex-addList-wrap {
+  /* background-color: #6d88e1; */
+  /* background-color: #ffead5; */
+  background-color: #20c997;
+  /*background-color: #12b886; */
+  border-radius: 20px;
+  width: 250px;
+  height: 350px;
+  position: relative;
+}
+.ex-addList {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.addList-sec {
+  padding: 10px;
+}
+.addList-sec input,
+select {
+  border-radius: 7px;
+  width: 95%;
+  height: 30px;
+  border: none;
+  padding: 0;
+}
+.addList-title {
+  font-size: 28px;
+  padding: 15px 15px 10px 15px;
+}
+.addList-subtitle {
+  width: 100%;
+  margin-bottom: 5px;
+  /* border: 1px solid red; */
+  /* background-color: #12b886; */
+  /* background-color: #20c997; */
 }
