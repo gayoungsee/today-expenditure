@@ -1,9 +1,19 @@
-import React from 'react';
+// import React from 'react';
+
+import React, { useState } from 'react';
 import TodayHeader from './TodayHeader';
 import ExpenditureList from './ExpenditureList';
-import ExpenditureAdd from './ExpenditureAdd';
+// import ExpenditureAdd from './ExpenditureAdd';
 
 const Expenditure = () => {
+  const [visible, setVisible] = useState(false);
+  console.log(visible);
+
+  const clickBtnAdd = () => {
+    console.log('hello');
+    setVisible(!visible);
+  };
+
   return (
     <div className="expenditure">
       <div className="ex-wrap">
@@ -11,16 +21,12 @@ const Expenditure = () => {
         <div className="ex-body-wrap">
           <div className="ex-body">
             <ExpenditureList />
-            <ExpenditureAdd />
+            {/* {visible && <ExpenditureAdd />} */}
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-const clickBtnAdd = () => {
-  console.log('btn');
 };
 
 export default Expenditure;
