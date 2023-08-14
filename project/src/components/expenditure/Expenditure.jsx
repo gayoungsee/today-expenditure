@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import TodayHeader from './TodayHeader';
 import ExpenditureList from './ExpenditureList';
-// import ExpenditureAdd from './ExpenditureAdd';
+import ExpenditureAdd from './ExpenditureAdd';
 
 const Expenditure = () => {
   const [visible, setVisible] = useState(false);
@@ -21,7 +21,7 @@ const Expenditure = () => {
         <div className="ex-body-wrap">
           <div className="ex-body">
             <ExpenditureList />
-            {/* {visible && <ExpenditureAdd />} */}
+            {visible && <ExpenditureAdd />}
           </div>
         </div>
       </div>
