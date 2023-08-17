@@ -7,21 +7,25 @@ import ExpenditureAdd from './ExpenditureAdd';
 
 const Expenditure = () => {
   const [visible, setVisible] = useState(false);
+
   console.log(visible);
 
-  const clickBtnAdd = () => {
+  const clickBtnPlus = () => {
     console.log('hello');
     setVisible(!visible);
+  };
+  const onClickAdd = e => {
+    console.log(e);
   };
 
   return (
     <div className="expenditure">
       <div className="ex-wrap">
-        <TodayHeader clickBtnAdd={clickBtnAdd} />
+        <TodayHeader clickBtnPlus={clickBtnPlus} />
         <div className="ex-body-wrap">
           <div className="ex-body">
             <ExpenditureList />
-            {visible && <ExpenditureAdd />}
+            {visible && <ExpenditureAdd onClickAdd={onClickAdd} />}
           </div>
         </div>
       </div>
