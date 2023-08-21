@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Categoryoptions from './Categoryoptions';
 
-const ExpenditureAdd = onClickAdd => {
-  const [inputs, setInputs] = useState({
-    content: '',
-    cost: '',
-  });
+const ExpenditureAdd = ({
+  onClickAdd,
+  onChangeAdd,
+  inputs,
+  options,
+  onChangCategory,
+}) => {
   const { content, cost } = inputs;
-
-  const onChange = e => {
-    const { value, name } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value,
-    });
-  };
 
   return (
     <div className="ex-addList-wrap">
@@ -21,11 +16,10 @@ const ExpenditureAdd = onClickAdd => {
       <div className="ex-addList">
         <div className="addList-sec">
           <p className="addList-subtitle">카테고리 선택</p>
-          <select name="" id="">
-            <option value="식사">식사</option>
-            <option value="문화생활">문화생활</option>
-            <option value="의료비">의료비</option>
-          </select>
+          <Categoryoptions
+            options={options}
+            onChangCategory={onChangCategory}
+          />
         </div>
         <div className="addList-sec">
           <p className="addList-subtitle">내용</p>
@@ -33,17 +27,22 @@ const ExpenditureAdd = onClickAdd => {
             type="text"
             name="content"
             value={content}
-            onChange={onChange}
+            onChange={onChangeAdd}
           />
         </div>
         <div className="addList-sec">
           <p className="addList-subtitle">가격</p>
-          <input type="number" name="cost" value={cost} onChange={onChange} />
+          <input
+            type="number"
+            name="cost"
+            value={cost}
+            onChange={onChangeAdd}
+          />
         </div>
       </div>
       <div className="addList-btns">
         <button className="addList-btns-cancle">취소</button>
-        <button className="addList-btns-add" onClick={() => onClickAdd}>
+        <button className="addList-btns-add" onClick={onClickAdd}>
           등록
         </button>
       </div>
