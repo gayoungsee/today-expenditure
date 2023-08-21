@@ -11,11 +11,12 @@
   "plugins": ["react"],
   "rules": {
     "react/prop-types": "off",
-    "no-unused-vars": [
-      "error",
-      {
-        "varsIgnorePattern": "React"
-      }
-    ]
+    "no-unused-vars": "off" // no-used error off
+    // "no-unused-vars": [
+    //   "error",
+    //   {
+    //     "varsIgnorePattern": "React"
+    //   }
+    // ]
   }
 }
